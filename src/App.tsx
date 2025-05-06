@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { GiDiceFire } from "react-icons/gi";
 import { TiMediaPause } from "react-icons/ti";
 
 const App = () => {
   const [advice, setAdvice] = useState("");
+
   const [loading, setLoading] = useState(false);
+
   const fetchAdvice = async () => {
     try {
       const res = await fetch("	https://api.adviceslip.com/advice");
@@ -15,11 +17,7 @@ const App = () => {
       console.error("Error fetching advice:", error);
     }
   };
-  // useEffect(() => {
-  //   setLoading(true);
-  //   fetchAdvice();
-  //   setLoading(false);
-  // })
+
   fetchAdvice();
   return (
     <main className="bg-[#202632] h-screen w-screen flex flex-col justify-center items-center">
