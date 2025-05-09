@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { GiDiceFire } from "react-icons/gi";
 import { TiMediaPause } from "react-icons/ti";
 
